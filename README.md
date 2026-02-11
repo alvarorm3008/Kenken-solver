@@ -1,55 +1,79 @@
-KenKen Game - Java Implementation 🧩
-A complete implementation of the KenKen puzzle game, featuring a graphical user interface (GUI), automated puzzle generation, game persistence, and an integrated solver. This project follows a layered architecture to ensure clean separation of concerns between Domain logic, Presentation, and Data Persistence.
+¡Tienes toda la razón! Hubo una mezcla de formatos en mi respuesta anterior. Aquí tienes el contenido íntegro, formateado exclusivamente en **Markdown puro** dentro de un bloque de código, para que lo copies y pegues directamente sin perder ningún estilo.
 
-🌟 Key Features
-Interactive GUI: Fully functional game board with intuitive controls.
+````markdown
+# 🧩 KenKen Game - Java Implementation
 
-Puzzle Generator: Create new KenKens based on custom sizes and difficulty levels.
+A professional implementation of the KenKen puzzle game, featuring a complete Graphical User Interface (GUI), automated puzzle generation, and persistent data storage. This project follows a **layered architecture** to ensure clean separation of concerns between Domain logic, Presentation, and Data Persistence.
 
-Smart Solver: An integrated algorithm capable of solving any valid KenKen board.
+## 🌟 Key Features
 
-Persistence System: Save and load user profiles, game statistics, and ongoing matches.
+- **Interactive GUI**: Fully functional game board with intuitive controls and real-time validation.
+- **Puzzle Generator**: Create new challenges based on custom sizes and difficulty levels.
+- **Smart Solver**: An integrated algorithm based on **Backtracking** capable of solving any valid KenKen board.
+- **Persistence System**: Robust save/load functionality for user profiles, statistics, and game states.
+- **Ranking System**: Competitive leaderboards for different game modes.
 
-Ranking System: Competitive leaderboards for different game modes.
+---
 
-🚀 Getting Started
-Prerequisites
-Java JDK 11 or higher.
+## 🧮 The Logic: Backtracking Algorithm
 
-Make (standard build tool on macOS and Linux).
+The core of the solver is a constraint-satisfaction algorithm. For each cell $(i, j)$ in a board of size $N$, the solver ensures:
 
-Compilation and Execution
-The project includes a Makefile to automate the build process, handle external libraries, and ensure all data directories are correctly initialized.
+1. **Row/Column Uniqueness**: $x \in \{1, \dots, N\}$ and $x \notin \text{row}_i, x \notin \text{col}_j$.
+2. **Arithmetic Constraint**: The operation result of the cage matches the target value.
 
-To Compile and Run the game:
+$$Result = f(x_1, x_2, \dots, x_n) = Target$$
 
-Bash
-make executa
-To Clean generated files (out folder):
+---
 
-Bash
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Java JDK 11** or higher.
+- **Make** build tool (standard on macOS and Linux).
+
+### Compilation and Execution
+
+The project includes a `Makefile` to automate the build process, handle external libraries, and ensure all data directories are correctly initialized.
+
+1. **To Compile and Run the game**:
+   ```bash
+   make executa
+   ```
+````
+
+2. **To Clean generated files (`out` folder)**:
+
+```bash
 make clean
-📁 Project Structure
+
+```
+
+---
+
+## 📁 Directory Structure
+
 The repository is organized as follows to maintain a clean workspace:
 
-java-kenken-solver/src: Contains the Java source code (organized by packages: domini, presentacio, persistencia, excepcions).
+- **`java-kenken-solver/src`**: Java source code organized by packages (`domini`, `presentacio`, `persistencia`, `excepcions`).
+- **`java-kenken-solver/lib`**: External dependencies (`json-simple-1.1.jar`).
+- **`data/`**: Local storage for game profiles, rankings, and saved sessions.
+- **`FONTS/`**: Visual assets, icons, and graphical resources used by the UI.
 
-java-kenken-solver/lib: External dependencies (e.g., json-simple-1.1.jar).
+---
 
-data/: Local database for game profiles, rankings, and saved sessions.
+## 🛠️ Architecture
 
-FONTS/: Visual assets, icons, and graphical resources used by the UI.
+The project is built using a **Layered Design Pattern**:
 
-🛠️ Architecture
-The project is built using a Layered Pattern:
+1. **Presentation Layer**: Handles Swing GUI components and user interactions.
+2. **Domain Layer**: Contains the core logic of the KenKen game, the solver, and the generator.
+3. **Persistence Layer**: Manages data storage and retrieval in JSON/text formats.
 
-Presentation Layer: Handles all Swing GUI components and user interactions.
+---
 
-Domain Layer: Contains the core logic of the KenKen game, the solver, and the generator.
+## 👥 Authors
 
-Persistence Layer: Manages data storage and retrieval in JSON/text formats.
-
-👥 Authors
-Álvaro - Core Development & UI Design
-
-Developed as part of the PROP course at FIB (Universitat Politècnica de Catalunya).
+- **Álvaro** - _Lead Developer & UI Implementation_
+- Developed as part of the **PROP** course at **FIB (Universitat Politècnica de Catalunya)**.

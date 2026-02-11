@@ -1,5 +1,5 @@
 # Configuración de Rutas - Basadas en tu comando que sí funciona
-SRC_DIR = src
+SRC_DIR = java-kenken-solver/src
 CLASS_OUTPUT = ./out
 LIB_JSON = java-kenken-solver/lib/json-simple-1.1.jar
 
