@@ -36,7 +36,7 @@ $$Result = f(x_1, x_2, \dots, x_n) = Target$$
 
    ```bash
    git clone [https://github.com/alvarorm3008/PROP-FIB.git](https://github.com/alvarorm3008/Kenken-Solver.git)
-   cd PROP-FIB
+   cd Kenken-Solver
    ```
 
 2. **Compile and Launch:**
