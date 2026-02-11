@@ -1,19 +1,16 @@
-¡Tienes toda la razón! Hubo una mezcla de formatos en mi respuesta anterior. Aquí tienes el contenido íntegro, formateado exclusivamente en **Markdown puro** dentro de un bloque de código, para que lo copies y pegues directamente sin perder ningún estilo.
+# 🧩 KenKen Solver & Generator
 
-````markdown
-# 🧩 KenKen Game - Java Implementation
+Interactive Java-based application dedicated to the generation, resolution, and analysis of KenKen puzzles using **Backtracking algorithms** and **Layered Architecture**.
 
-A professional implementation of the KenKen puzzle game, featuring a complete Graphical User Interface (GUI), automated puzzle generation, and persistent data storage. This project follows a **layered architecture** to ensure clean separation of concerns between Domain logic, Presentation, and Data Persistence.
+![Project Preview](preview.png)
 
-## 🌟 Key Features
+## 📊 Overview
 
-- **Interactive GUI**: Fully functional game board with intuitive controls and real-time validation.
-- **Puzzle Generator**: Create new challenges based on custom sizes and difficulty levels.
-- **Smart Solver**: An integrated algorithm based on **Backtracking** capable of solving any valid KenKen board.
-- **Persistence System**: Robust save/load functionality for user profiles, statistics, and game states.
-- **Ranking System**: Competitive leaderboards for different game modes.
+This project implements a complete ecosystem for KenKen enthusiasts, combining advanced logic with an intuitive graphical interface.
 
----
+- **Data Processing**: Persistence layer in JSON/Text to manage user profiles, rankings, and game states.
+- **Math Modeling**: Efficient solver based on recursive backtracking with pruning to handle complex constraints.
+- **Visualization**: A Java Swing-based GUI providing a seamless user experience for puzzle interaction.
 
 ## 🧮 The Logic: Backtracking Algorithm
 
@@ -26,54 +23,45 @@ $$Result = f(x_1, x_2, \dots, x_n) = Target$$
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Tech Stack
 
-### Prerequisites
+- **Backend / Logic**: Java 11 (Domain & Persistence layers).
+- **Frontend / UI**: Java Swing, AWT.
+- **Data Handling**: JSON-simple library.
+- **Build System**: Makefile.
 
-- **Java JDK 11** or higher.
-- **Make** build tool (standard on macOS and Linux).
+## 🚀 How to Run Locally
 
-### Compilation and Execution
+1. **Clone the repository:**
 
-The project includes a `Makefile` to automate the build process, handle external libraries, and ensure all data directories are correctly initialized.
+   ```bash
+   git clone [https://github.com/alvarorm3008/PROP-FIB.git](https://github.com/alvarorm3008/PROP-FIB.git)
+   cd PROP-FIB
+   ```
 
-1. **To Compile and Run the game**:
+2. **Compile and Launch:**
+   The project uses a **Makefile** to manage dependencies and resource paths automatically. Run:
+
    ```bash
    make executa
    ```
-````
 
-2. **To Clean generated files (`out` folder)**:
-
-```bash
-make clean
-
-```
+3. **Maintenance:**
+   To remove compilation files and reset the environment:
+   ```bash
+   make clean
+   ```
 
 ---
 
 ## 📁 Directory Structure
 
-The repository is organized as follows to maintain a clean workspace:
-
-- **`java-kenken-solver/src`**: Java source code organized by packages (`domini`, `presentacio`, `persistencia`, `excepcions`).
+- **`java-kenken-solver/src`**: Source code organized by layers (Presentation, Domain, Persistence).
 - **`java-kenken-solver/lib`**: External dependencies (`json-simple-1.1.jar`).
-- **`data/`**: Local storage for game profiles, rankings, and saved sessions.
-- **`FONTS/`**: Visual assets, icons, and graphical resources used by the UI.
+- **`data/`**: Local database for profiles, rankings, and saved games.
+- **`FONTS/`**: Visual assets and icons used by the GUI.
 
 ---
 
-## 🛠️ Architecture
-
-The project is built using a **Layered Design Pattern**:
-
-1. **Presentation Layer**: Handles Swing GUI components and user interactions.
-2. **Domain Layer**: Contains the core logic of the KenKen game, the solver, and the generator.
-3. **Persistence Layer**: Manages data storage and retrieval in JSON/text formats.
-
----
-
-## 👥 Authors
-
-- **Álvaro** - _Lead Developer & UI Implementation_
-- Developed as part of the **PROP** course at **FIB (Universitat Politècnica de Catalunya)**.
+**Author:** Alvaro Rodriguez
+_Project developed for the PROP course at FIB (UPC)_
