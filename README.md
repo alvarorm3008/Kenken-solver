@@ -63,5 +63,5 @@ $$Result = f(x_1, x_2, \dots, x_n) = Target$$
 
 ---
 
-**Author:** Alvaro Rodriguez
+**Author:** Alvaro Rodriguez, Laia Belaustegui and Carla López
 _Project developed for the PROP course at FIB (UPC)_
